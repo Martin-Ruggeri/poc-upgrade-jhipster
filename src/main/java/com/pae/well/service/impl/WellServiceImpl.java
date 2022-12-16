@@ -41,7 +41,7 @@ public class WellServiceImpl implements WellService {
 
     @Override
     public WellDTO update(WellDTO wellDTO) {
-        log.debug("Request to save Well : {}", wellDTO);
+        log.debug("Request to update Well : {}", wellDTO);
         Well well = wellMapper.toEntity(wellDTO);
         well = wellRepository.save(well);
         return wellMapper.toDto(well);

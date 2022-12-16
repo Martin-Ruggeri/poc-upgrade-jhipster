@@ -190,7 +190,7 @@ class ManagementUnitResourceIT {
 
     @Test
     @Transactional
-    void putNewManagementUnit() throws Exception {
+    void putExistingManagementUnit() throws Exception {
         // Initialize the database
         managementUnitRepository.saveAndFlush(managementUnit);
 
