@@ -8,6 +8,7 @@ import javax.validation.constraints.*;
 /**
  * A DTO for the {@link com.pae.well.domain.Note} entity.
  */
+@SuppressWarnings("common-java:DuplicatedBlocks")
 public class NoteDTO implements Serializable {
 
     private Long id;

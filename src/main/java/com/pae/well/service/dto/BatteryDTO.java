@@ -7,6 +7,7 @@ import javax.validation.constraints.*;
 /**
  * A DTO for the {@link com.pae.well.domain.Battery} entity.
  */
+@SuppressWarnings("common-java:DuplicatedBlocks")
 public class BatteryDTO implements Serializable {
 
     private Long id;

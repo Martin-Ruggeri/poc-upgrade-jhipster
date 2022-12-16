@@ -42,7 +42,7 @@ public class BatteryServiceImpl implements BatteryService {
 
     @Override
     public BatteryDTO update(BatteryDTO batteryDTO) {
-        log.debug("Request to save Battery : {}", batteryDTO);
+        log.debug("Request to update Battery : {}", batteryDTO);
         Battery battery = batteryMapper.toEntity(batteryDTO);
         battery = batteryRepository.save(battery);
         return batteryMapper.toDto(battery);

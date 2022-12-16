@@ -12,6 +12,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Entity
 @Table(name = "additional_data_item_description")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@SuppressWarnings("common-java:DuplicatedBlocks")
 public class AdditionalDataItemDescription implements Serializable {
 
     private static final long serialVersionUID = 1L;

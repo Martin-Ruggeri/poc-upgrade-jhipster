@@ -12,6 +12,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Entity
 @Table(name = "extraction_method")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@SuppressWarnings("common-java:DuplicatedBlocks")
 public class ExtractionMethod implements Serializable {
 
     private static final long serialVersionUID = 1L;

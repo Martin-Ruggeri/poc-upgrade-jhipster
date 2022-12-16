@@ -275,7 +275,7 @@ class AdditionalDataItemResourceIT {
 
     @Test
     @Transactional
-    void putNewAdditionalDataItem() throws Exception {
+    void putExistingAdditionalDataItem() throws Exception {
         // Initialize the database
         additionalDataItemRepository.saveAndFlush(additionalDataItem);
 

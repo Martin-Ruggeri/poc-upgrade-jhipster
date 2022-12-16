@@ -8,6 +8,7 @@ import javax.validation.constraints.*;
 /**
  * A DTO for the {@link com.pae.well.domain.AdditionalDataItem} entity.
  */
+@SuppressWarnings("common-java:DuplicatedBlocks")
 public class AdditionalDataItemDTO implements Serializable {
 
     private Long id;

@@ -398,7 +398,7 @@ class WellResourceIT {
 
     @Test
     @Transactional
-    void putNewWell() throws Exception {
+    void putExistingWell() throws Exception {
         // Initialize the database
         wellRepository.saveAndFlush(well);
 

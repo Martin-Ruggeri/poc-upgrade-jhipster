@@ -190,7 +190,7 @@ class ExtractionMethodResourceIT {
 
     @Test
     @Transactional
-    void putNewExtractionMethod() throws Exception {
+    void putExistingExtractionMethod() throws Exception {
         // Initialize the database
         extractionMethodRepository.saveAndFlush(extractionMethod);
 
