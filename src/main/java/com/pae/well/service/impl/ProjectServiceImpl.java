@@ -42,7 +42,7 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public ProjectDTO update(ProjectDTO projectDTO) {
-        log.debug("Request to save Project : {}", projectDTO);
+        log.debug("Request to update Project : {}", projectDTO);
         Project project = projectMapper.toEntity(projectDTO);
         project = projectRepository.save(project);
         return projectMapper.toDto(project);

@@ -211,7 +211,7 @@ class AdditionalDataItemDescriptionResourceIT {
 
     @Test
     @Transactional
-    void putNewAdditionalDataItemDescription() throws Exception {
+    void putExistingAdditionalDataItemDescription() throws Exception {
         // Initialize the database
         additionalDataItemDescriptionRepository.saveAndFlush(additionalDataItemDescription);
 

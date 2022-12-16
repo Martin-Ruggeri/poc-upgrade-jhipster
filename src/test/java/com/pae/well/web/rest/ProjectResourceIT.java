@@ -211,7 +211,7 @@ class ProjectResourceIT {
 
     @Test
     @Transactional
-    void putNewProject() throws Exception {
+    void putExistingProject() throws Exception {
         // Initialize the database
         projectRepository.saveAndFlush(project);
 

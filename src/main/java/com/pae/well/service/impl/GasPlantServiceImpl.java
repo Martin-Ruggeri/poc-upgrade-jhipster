@@ -42,7 +42,7 @@ public class GasPlantServiceImpl implements GasPlantService {
 
     @Override
     public GasPlantDTO update(GasPlantDTO gasPlantDTO) {
-        log.debug("Request to save GasPlant : {}", gasPlantDTO);
+        log.debug("Request to update GasPlant : {}", gasPlantDTO);
         GasPlant gasPlant = gasPlantMapper.toEntity(gasPlantDTO);
         gasPlant = gasPlantRepository.save(gasPlant);
         return gasPlantMapper.toDto(gasPlant);

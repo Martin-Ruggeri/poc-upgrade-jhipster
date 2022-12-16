@@ -9,6 +9,7 @@ import javax.validation.constraints.*;
  * A DTO for the {@link com.pae.well.domain.WellStatus} entity.
  */
 @Schema(description = "Estado del pozo")
+@SuppressWarnings("common-java:DuplicatedBlocks")
 public class WellStatusDTO implements Serializable {
 
     private Long id;

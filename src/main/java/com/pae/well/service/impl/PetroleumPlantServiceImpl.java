@@ -42,7 +42,7 @@ public class PetroleumPlantServiceImpl implements PetroleumPlantService {
 
     @Override
     public PetroleumPlantDTO update(PetroleumPlantDTO petroleumPlantDTO) {
-        log.debug("Request to save PetroleumPlant : {}", petroleumPlantDTO);
+        log.debug("Request to update PetroleumPlant : {}", petroleumPlantDTO);
         PetroleumPlant petroleumPlant = petroleumPlantMapper.toEntity(petroleumPlantDTO);
         petroleumPlant = petroleumPlantRepository.save(petroleumPlant);
         return petroleumPlantMapper.toDto(petroleumPlant);

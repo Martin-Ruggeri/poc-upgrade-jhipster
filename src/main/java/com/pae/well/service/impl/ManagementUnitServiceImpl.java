@@ -42,7 +42,7 @@ public class ManagementUnitServiceImpl implements ManagementUnitService {
 
     @Override
     public ManagementUnitDTO update(ManagementUnitDTO managementUnitDTO) {
-        log.debug("Request to save ManagementUnit : {}", managementUnitDTO);
+        log.debug("Request to update ManagementUnit : {}", managementUnitDTO);
         ManagementUnit managementUnit = managementUnitMapper.toEntity(managementUnitDTO);
         managementUnit = managementUnitRepository.save(managementUnit);
         return managementUnitMapper.toDto(managementUnit);

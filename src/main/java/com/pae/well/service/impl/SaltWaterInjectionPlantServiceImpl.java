@@ -45,7 +45,7 @@ public class SaltWaterInjectionPlantServiceImpl implements SaltWaterInjectionPla
 
     @Override
     public SaltWaterInjectionPlantDTO update(SaltWaterInjectionPlantDTO saltWaterInjectionPlantDTO) {
-        log.debug("Request to save SaltWaterInjectionPlant : {}", saltWaterInjectionPlantDTO);
+        log.debug("Request to update SaltWaterInjectionPlant : {}", saltWaterInjectionPlantDTO);
         SaltWaterInjectionPlant saltWaterInjectionPlant = saltWaterInjectionPlantMapper.toEntity(saltWaterInjectionPlantDTO);
         saltWaterInjectionPlant = saltWaterInjectionPlantRepository.save(saltWaterInjectionPlant);
         return saltWaterInjectionPlantMapper.toDto(saltWaterInjectionPlant);

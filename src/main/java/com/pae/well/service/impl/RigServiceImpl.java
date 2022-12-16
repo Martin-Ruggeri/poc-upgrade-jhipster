@@ -42,7 +42,7 @@ public class RigServiceImpl implements RigService {
 
     @Override
     public RigDTO update(RigDTO rigDTO) {
-        log.debug("Request to save Rig : {}", rigDTO);
+        log.debug("Request to update Rig : {}", rigDTO);
         Rig rig = rigMapper.toEntity(rigDTO);
         rig = rigRepository.save(rig);
         return rigMapper.toDto(rig);

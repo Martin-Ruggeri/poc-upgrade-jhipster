@@ -8,6 +8,7 @@ import javax.validation.constraints.*;
 /**
  * A DTO for the {@link com.pae.well.domain.WellChangeExtractionMethod} entity.
  */
+@SuppressWarnings("common-java:DuplicatedBlocks")
 public class WellChangeExtractionMethodDTO implements Serializable {
 
     private Long id;

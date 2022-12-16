@@ -45,7 +45,7 @@ public class AdditionalDataItemServiceImpl implements AdditionalDataItemService 
 
     @Override
     public AdditionalDataItemDTO update(AdditionalDataItemDTO additionalDataItemDTO) {
-        log.debug("Request to save AdditionalDataItem : {}", additionalDataItemDTO);
+        log.debug("Request to update AdditionalDataItem : {}", additionalDataItemDTO);
         AdditionalDataItem additionalDataItem = additionalDataItemMapper.toEntity(additionalDataItemDTO);
         additionalDataItem = additionalDataItemRepository.save(additionalDataItem);
         return additionalDataItemMapper.toDto(additionalDataItem);

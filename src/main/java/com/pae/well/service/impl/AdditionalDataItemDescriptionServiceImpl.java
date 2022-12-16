@@ -47,7 +47,7 @@ public class AdditionalDataItemDescriptionServiceImpl implements AdditionalDataI
 
     @Override
     public AdditionalDataItemDescriptionDTO update(AdditionalDataItemDescriptionDTO additionalDataItemDescriptionDTO) {
-        log.debug("Request to save AdditionalDataItemDescription : {}", additionalDataItemDescriptionDTO);
+        log.debug("Request to update AdditionalDataItemDescription : {}", additionalDataItemDescriptionDTO);
         AdditionalDataItemDescription additionalDataItemDescription = additionalDataItemDescriptionMapper.toEntity(
             additionalDataItemDescriptionDTO
         );

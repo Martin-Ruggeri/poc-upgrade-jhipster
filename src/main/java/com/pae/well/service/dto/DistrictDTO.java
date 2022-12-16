@@ -9,6 +9,7 @@ import javax.validation.constraints.*;
  * A DTO for the {@link com.pae.well.domain.District} entity.
  */
 @Schema(description = "Distrito")
+@SuppressWarnings("common-java:DuplicatedBlocks")
 public class DistrictDTO implements Serializable {
 
     private Long id;

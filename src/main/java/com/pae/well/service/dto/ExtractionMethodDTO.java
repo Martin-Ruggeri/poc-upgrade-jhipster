@@ -7,6 +7,7 @@ import javax.validation.constraints.*;
 /**
  * A DTO for the {@link com.pae.well.domain.ExtractionMethod} entity.
  */
+@SuppressWarnings("common-java:DuplicatedBlocks")
 public class ExtractionMethodDTO implements Serializable {
 
     private Long id;

@@ -45,7 +45,7 @@ public class ExtractionMethodServiceImpl implements ExtractionMethodService {
 
     @Override
     public ExtractionMethodDTO update(ExtractionMethodDTO extractionMethodDTO) {
-        log.debug("Request to save ExtractionMethod : {}", extractionMethodDTO);
+        log.debug("Request to update ExtractionMethod : {}", extractionMethodDTO);
         ExtractionMethod extractionMethod = extractionMethodMapper.toEntity(extractionMethodDTO);
         extractionMethod = extractionMethodRepository.save(extractionMethod);
         return extractionMethodMapper.toDto(extractionMethod);
