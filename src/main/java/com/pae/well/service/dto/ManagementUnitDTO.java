@@ -9,6 +9,7 @@ import javax.validation.constraints.*;
  * A DTO for the {@link com.pae.well.domain.ManagementUnit} entity.
  */
 @Schema(description = "Unidad de gestión de un pozo")
+@SuppressWarnings("common-java:DuplicatedBlocks")
 public class ManagementUnitDTO implements Serializable {
 
     private Long id;

@@ -41,7 +41,7 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public NoteDTO update(NoteDTO noteDTO) {
-        log.debug("Request to save Note : {}", noteDTO);
+        log.debug("Request to update Note : {}", noteDTO);
         Note note = noteMapper.toEntity(noteDTO);
         note = noteRepository.save(note);
         return noteMapper.toDto(note);

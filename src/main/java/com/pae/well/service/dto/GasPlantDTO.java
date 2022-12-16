@@ -7,6 +7,7 @@ import javax.validation.constraints.*;
 /**
  * A DTO for the {@link com.pae.well.domain.GasPlant} entity.
  */
+@SuppressWarnings("common-java:DuplicatedBlocks")
 public class GasPlantDTO implements Serializable {
 
     private Long id;

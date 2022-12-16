@@ -211,7 +211,7 @@ class DistrictResourceIT {
 
     @Test
     @Transactional
-    void putNewDistrict() throws Exception {
+    void putExistingDistrict() throws Exception {
         // Initialize the database
         districtRepository.saveAndFlush(district);
 

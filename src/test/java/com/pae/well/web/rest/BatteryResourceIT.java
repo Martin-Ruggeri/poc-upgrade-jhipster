@@ -211,7 +211,7 @@ class BatteryResourceIT {
 
     @Test
     @Transactional
-    void putNewBattery() throws Exception {
+    void putExistingBattery() throws Exception {
         // Initialize the database
         batteryRepository.saveAndFlush(battery);
 

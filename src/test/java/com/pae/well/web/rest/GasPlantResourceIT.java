@@ -211,7 +211,7 @@ class GasPlantResourceIT {
 
     @Test
     @Transactional
-    void putNewGasPlant() throws Exception {
+    void putExistingGasPlant() throws Exception {
         // Initialize the database
         gasPlantRepository.saveAndFlush(gasPlant);
 
