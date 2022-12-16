@@ -271,7 +271,7 @@ class NoteResourceIT {
 
     @Test
     @Transactional
-    void putNewNote() throws Exception {
+    void putExistingNote() throws Exception {
         // Initialize the database
         noteRepository.saveAndFlush(note);
 

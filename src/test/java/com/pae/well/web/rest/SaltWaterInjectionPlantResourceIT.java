@@ -211,7 +211,7 @@ class SaltWaterInjectionPlantResourceIT {
 
     @Test
     @Transactional
-    void putNewSaltWaterInjectionPlant() throws Exception {
+    void putExistingSaltWaterInjectionPlant() throws Exception {
         // Initialize the database
         saltWaterInjectionPlantRepository.saveAndFlush(saltWaterInjectionPlant);
 

@@ -239,7 +239,7 @@ class WellChangeExtractionMethodResourceIT {
 
     @Test
     @Transactional
-    void putNewWellChangeExtractionMethod() throws Exception {
+    void putExistingWellChangeExtractionMethod() throws Exception {
         // Initialize the database
         wellChangeExtractionMethodRepository.saveAndFlush(wellChangeExtractionMethod);
 

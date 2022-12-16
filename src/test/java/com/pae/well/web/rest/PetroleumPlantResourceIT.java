@@ -211,7 +211,7 @@ class PetroleumPlantResourceIT {
 
     @Test
     @Transactional
-    void putNewPetroleumPlant() throws Exception {
+    void putExistingPetroleumPlant() throws Exception {
         // Initialize the database
         petroleumPlantRepository.saveAndFlush(petroleumPlant);
 

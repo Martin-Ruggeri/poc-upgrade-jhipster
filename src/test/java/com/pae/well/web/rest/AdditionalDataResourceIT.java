@@ -188,7 +188,7 @@ class AdditionalDataResourceIT {
 
     @Test
     @Transactional
-    void putNewAdditionalData() throws Exception {
+    void putExistingAdditionalData() throws Exception {
         // Initialize the database
         additionalDataRepository.saveAndFlush(additionalData);
 

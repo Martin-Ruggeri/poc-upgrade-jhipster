@@ -42,7 +42,7 @@ public class AdditionalDataServiceImpl implements AdditionalDataService {
 
     @Override
     public AdditionalDataDTO update(AdditionalDataDTO additionalDataDTO) {
-        log.debug("Request to save AdditionalData : {}", additionalDataDTO);
+        log.debug("Request to update AdditionalData : {}", additionalDataDTO);
         AdditionalData additionalData = additionalDataMapper.toEntity(additionalDataDTO);
         additionalData = additionalDataRepository.save(additionalData);
         return additionalDataMapper.toDto(additionalData);

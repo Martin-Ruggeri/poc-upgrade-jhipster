@@ -44,7 +44,7 @@ public class WellChangeExtractionMethodServiceImpl implements WellChangeExtracti
 
     @Override
     public WellChangeExtractionMethodDTO update(WellChangeExtractionMethodDTO wellChangeExtractionMethodDTO) {
-        log.debug("Request to save WellChangeExtractionMethod : {}", wellChangeExtractionMethodDTO);
+        log.debug("Request to update WellChangeExtractionMethod : {}", wellChangeExtractionMethodDTO);
         WellChangeExtractionMethod wellChangeExtractionMethod = wellChangeExtractionMethodMapper.toEntity(wellChangeExtractionMethodDTO);
         wellChangeExtractionMethod = wellChangeExtractionMethodRepository.save(wellChangeExtractionMethod);
         return wellChangeExtractionMethodMapper.toDto(wellChangeExtractionMethod);

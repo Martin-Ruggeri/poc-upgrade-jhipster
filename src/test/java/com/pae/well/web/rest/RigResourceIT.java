@@ -202,7 +202,7 @@ class RigResourceIT {
 
     @Test
     @Transactional
-    void putNewRig() throws Exception {
+    void putExistingRig() throws Exception {
         // Initialize the database
         rigRepository.saveAndFlush(rig);
 

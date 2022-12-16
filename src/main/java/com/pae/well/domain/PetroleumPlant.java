@@ -13,6 +13,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Entity
 @Table(name = "petroleum_plant")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@SuppressWarnings("common-java:DuplicatedBlocks")
 public class PetroleumPlant implements Serializable {
 
     private static final long serialVersionUID = 1L;

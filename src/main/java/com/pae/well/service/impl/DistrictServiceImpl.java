@@ -42,7 +42,7 @@ public class DistrictServiceImpl implements DistrictService {
 
     @Override
     public DistrictDTO update(DistrictDTO districtDTO) {
-        log.debug("Request to save District : {}", districtDTO);
+        log.debug("Request to update District : {}", districtDTO);
         District district = districtMapper.toEntity(districtDTO);
         district = districtRepository.save(district);
         return districtMapper.toDto(district);

@@ -9,6 +9,7 @@ import javax.validation.constraints.*;
 /**
  * A DTO for the {@link com.pae.well.domain.Well} entity.
  */
+@SuppressWarnings("common-java:DuplicatedBlocks")
 public class WellDTO implements Serializable {
 
     private Long id;
