@@ -1,0 +1,26 @@
+{
+  "applications": ["well"],
+  "changelogDate": "20221216161940",
+  "clientRootFolder": "well",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "management_unit",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "50"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Unidad de gestión de un pozo",
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "well",
+  "name": "ManagementUnit",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

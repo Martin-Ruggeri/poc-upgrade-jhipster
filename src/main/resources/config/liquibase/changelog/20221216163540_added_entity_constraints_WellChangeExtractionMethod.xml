@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity WellChangeExtractionMethod.
+    -->
+    <changeSet id="20221216163540-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="well_id"
+                                 baseTableName="well_change_extraction_method"
+                                 constraintName="fk_well_change_extraction_method__well_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="well"/>
+
+        <addForeignKeyConstraint baseColumnNames="extraction_method_id"
+                                 baseTableName="well_change_extraction_method"
+                                 constraintName="fk_well_change_extraction_method__extraction_method_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="extraction_method"/>
+    </changeSet>
+</databaseChangeLog>

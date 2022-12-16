@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity AdditionalDataItem.
+    -->
+    <changeSet id="20221216162940-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="additional_data_id"
+                                 baseTableName="additional_data_item"
+                                 constraintName="fk_additional_data_item__additional_data_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="additional_data"/>
+
+        <addForeignKeyConstraint baseColumnNames="additional_data_item_description_id"
+                                 baseTableName="additional_data_item"
+                                 constraintName="fk_additional_data_item__additional_data_item_description_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="additional_data_item_description"/>
+    </changeSet>
+</databaseChangeLog>

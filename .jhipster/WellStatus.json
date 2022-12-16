@@ -1,0 +1,26 @@
+{
+  "applications": ["well"],
+  "changelogDate": "20221216162040",
+  "clientRootFolder": "well",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "well_status",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "50"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Estado del pozo",
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "well",
+  "name": "WellStatus",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

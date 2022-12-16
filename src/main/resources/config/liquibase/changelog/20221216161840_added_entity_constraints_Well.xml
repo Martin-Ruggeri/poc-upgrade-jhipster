@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Well.
+    -->
+    <changeSet id="20221216161840-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="salt_water_injection_plant_id"
+                                 baseTableName="well"
+                                 constraintName="fk_well__salt_water_injection_plant_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="salt_water_injection_plant"/>
+
+        <addForeignKeyConstraint baseColumnNames="petroleum_plant_id"
+                                 baseTableName="well"
+                                 constraintName="fk_well__petroleum_plant_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="petroleum_plant"/>
+
+        <addForeignKeyConstraint baseColumnNames="gas_plant_id"
+                                 baseTableName="well"
+                                 constraintName="fk_well__gas_plant_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="gas_plant"/>
+
+        <addForeignKeyConstraint baseColumnNames="project_id"
+                                 baseTableName="well"
+                                 constraintName="fk_well__project_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="project"/>
+
+        <addForeignKeyConstraint baseColumnNames="rig_id"
+                                 baseTableName="well"
+                                 constraintName="fk_well__rig_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rig"/>
+
+        <addForeignKeyConstraint baseColumnNames="battery_id"
+                                 baseTableName="well"
+                                 constraintName="fk_well__battery_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="battery"/>
+
+        <addForeignKeyConstraint baseColumnNames="district_id"
+                                 baseTableName="well"
+                                 constraintName="fk_well__district_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="district"/>
+
+        <addForeignKeyConstraint baseColumnNames="well_status_id"
+                                 baseTableName="well"
+                                 constraintName="fk_well__well_status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="well_status"/>
+    </changeSet>
+</databaseChangeLog>
