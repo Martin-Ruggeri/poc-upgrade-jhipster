@@ -1,0 +1,160 @@
+{
+  "applications": ["well"],
+  "changelogDate": "20221216161840",
+  "clientRootFolder": "well",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "well",
+  "fields": [
+    {
+      "fieldName": "idUwi",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"],
+      "javadoc": "UWI is the Well identifier. It's the primary key in database"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "wellType",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "pumpModel",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "javadoc": "Modelo de bomba"
+    },
+    {
+      "fieldName": "manifold",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "province",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "deposit",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "javadoc": "Yacimiento"
+    },
+    {
+      "fieldName": "campaignYear",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "startUpDate",
+      "fieldType": "LocalDate",
+      "javadoc": "Fecha de puesta en marcha"
+    },
+    {
+      "fieldName": "isInjector",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "stemTorque",
+      "fieldType": "Double",
+      "javadoc": "Torque Vastago"
+    },
+    {
+      "fieldName": "pumpConstant",
+      "fieldType": "Double",
+      "javadoc": "Bomba Constante"
+    },
+    {
+      "fieldName": "stemRPM",
+      "fieldType": "Double",
+      "javadoc": "RPM Vastago"
+    },
+    {
+      "fieldName": "variatorFrequency",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "extractionType",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "500"
+    },
+    {
+      "fieldName": "extractionSubtype",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "500"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "well",
+  "name": "Well",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "saltWaterInjectionPlant",
+      "otherEntityRelationshipName": "well",
+      "relationshipName": "saltWaterInjectionPlant",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "petroleumPlant",
+      "otherEntityRelationshipName": "well",
+      "relationshipName": "petroleumPlant",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "gasPlant",
+      "otherEntityRelationshipName": "well",
+      "relationshipName": "gasPlant",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "well",
+      "relationshipName": "project",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "rig",
+      "otherEntityRelationshipName": "well",
+      "relationshipName": "rig",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "battery",
+      "otherEntityRelationshipName": "well",
+      "relationshipName": "battery",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "district",
+      "otherEntityRelationshipName": "well",
+      "relationshipName": "district",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "wellStatus",
+      "otherEntityRelationshipName": "well",
+      "relationshipName": "wellStatus",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

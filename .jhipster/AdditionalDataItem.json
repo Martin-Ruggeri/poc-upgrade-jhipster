@@ -1,0 +1,50 @@
+{
+  "applications": ["well"],
+  "changelogDate": "20221216162940",
+  "clientRootFolder": "well",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "additional_data_item",
+  "fields": [
+    {
+      "fieldName": "idUser",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "comment",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2000"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "well",
+  "name": "AdditionalDataItem",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "additionalData",
+      "otherEntityRelationshipName": "additionalDataItem",
+      "relationshipName": "additionalData",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "additionalDataItemDescription",
+      "otherEntityRelationshipName": "additionalDataItem",
+      "relationshipName": "additionalDataItemDescription",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceImpl"
+}

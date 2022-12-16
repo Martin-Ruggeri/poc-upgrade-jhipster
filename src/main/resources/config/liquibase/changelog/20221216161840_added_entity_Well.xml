@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Well.
+    -->
+    <changeSet id="20221216161840-1" author="jhipster">
+        <createTable tableName="well">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="id_uwi" type="integer" remarks="UWI is the Well identifier. It&apos;s the primary key in database">
+                <constraints nullable="false" />
+            </column>
+            <column name="name" type="varchar(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="well_type" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pump_model" type="varchar(100)" remarks="Modelo de bomba">
+                <constraints nullable="true" />
+            </column>
+            <column name="manifold" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="province" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="deposit" type="varchar(100)" remarks="Yacimiento">
+                <constraints nullable="true" />
+            </column>
+            <column name="campaign_year" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="start_up_date" type="date" remarks="Fecha de puesta en marcha">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_injector" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="stem_torque" type="double" remarks="Torque Vastago">
+                <constraints nullable="true" />
+            </column>
+            <column name="pump_constant" type="double" remarks="Bomba Constante">
+                <constraints nullable="true" />
+            </column>
+            <column name="stem_rpm" type="double" remarks="RPM Vastago">
+                <constraints nullable="true" />
+            </column>
+            <column name="variator_frequency" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="extraction_type" type="varchar(500)">
+                <constraints nullable="true" />
+            </column>
+            <column name="extraction_subtype" type="varchar(500)">
+                <constraints nullable="true" />
+            </column>
+            <column name="salt_water_injection_plant_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="petroleum_plant_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="gas_plant_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="project_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="rig_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="battery_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="district_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="well_status_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20221216161840-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/well.csv"
+                  separator=";"
+                  tableName="well"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="id_uwi" type="numeric"/>
+            <column name="name" type="string"/>
+            <column name="well_type" type="string"/>
+            <column name="pump_model" type="string"/>
+            <column name="manifold" type="string"/>
+            <column name="province" type="string"/>
+            <column name="deposit" type="string"/>
+            <column name="campaign_year" type="numeric"/>
+            <column name="start_up_date" type="date"/>
+            <column name="is_injector" type="boolean"/>
+            <column name="stem_torque" type="numeric"/>
+            <column name="pump_constant" type="numeric"/>
+            <column name="stem_rpm" type="numeric"/>
+            <column name="variator_frequency" type="numeric"/>
+            <column name="extraction_type" type="string"/>
+            <column name="extraction_subtype" type="string"/>
+            <column name="project_id" type="numeric"/>
+            <column name="rig_id" type="numeric"/>
+            <column name="battery_id" type="numeric"/>
+            <column name="district_id" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>
